@@ -1,22 +1,22 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Página-1" id="ePOHfqQPOcAwUeqJMUFj">
-    <mxGraphModel dx="774" dy="417" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1601" dy="451" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <UserObject label="" mermaidData="{&#xa;  &quot;data&quot;: &quot;flowchart TD\n    A[Cliente / Sistema externo] --&gt; B[FastAPI]&quot;,&#xa;  &quot;config&quot;: null&#xa;}" id="rtqBH8RjRk_DZ-TgEaU9-1">
           <mxCell connectable="0" parent="1" style="group;transparentBounds=1;editIcon=1;lockedGroup=0;groupPadding=10;" vertex="1">
-            <mxGeometry as="geometry" />
+            <mxGeometry height="198" width="469" as="geometry" />
           </mxCell>
         </UserObject>
-        <UserObject label="Cliente / Sistema externo" mermaidId="n:A" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Cliente / Sistema externo" id="rtqBH8RjRk_DZ-TgEaU9-2">
+        <UserObject label="Client / Another system" mermaidId="n:A" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Cliente / Sistema externo" id="rtqBH8RjRk_DZ-TgEaU9-2">
           <mxCell parent="rtqBH8RjRk_DZ-TgEaU9-1" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
             <mxGeometry height="54" width="245" x="280" y="30" as="geometry" />
           </mxCell>
         </UserObject>
-        <UserObject label="FastAPI" mermaidId="n:B" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="FastAPI" id="rtqBH8RjRk_DZ-TgEaU9-3">
+        <UserObject label="API authentication method" mermaidId="n:B" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="FastAPI" id="rtqBH8RjRk_DZ-TgEaU9-3">
           <mxCell parent="rtqBH8RjRk_DZ-TgEaU9-1" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
-            <mxGeometry height="54" width="112" x="347" y="134" as="geometry" />
+            <mxGeometry height="54" width="169" x="318" y="144" as="geometry" />
           </mxCell>
         </UserObject>
         <UserObject label="" mermaidId="e:A-&gt;B#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="rtqBH8RjRk_DZ-TgEaU9-4">
@@ -26,6 +26,49 @@
             </mxGeometry>
           </mxCell>
         </UserObject>
+        <mxCell id="Hv_AU8i6EBTJNeVN1DGL-6" edge="1" parent="1" source="Hv_AU8i6EBTJNeVN1DGL-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="Hv_AU8i6EBTJNeVN1DGL-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Hv_AU8i6EBTJNeVN1DGL-9" edge="1" parent="1" source="Hv_AU8i6EBTJNeVN1DGL-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="Hv_AU8i6EBTJNeVN1DGL-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Hv_AU8i6EBTJNeVN1DGL-2" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="Authenticated to the API?" vertex="1">
+          <mxGeometry height="160" width="172.5" x="316.25" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="Hv_AU8i6EBTJNeVN1DGL-3" edge="1" parent="1" source="rtqBH8RjRk_DZ-TgEaU9-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="Hv_AU8i6EBTJNeVN1DGL-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Hv_AU8i6EBTJNeVN1DGL-4" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Access denied, return not authorized error" vertex="1">
+          <mxGeometry height="80" width="120" x="630" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="Hv_AU8i6EBTJNeVN1DGL-7" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="No" vertex="1">
+          <mxGeometry height="30" width="60" x="500" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="Hv_AU8i6EBTJNeVN1DGL-17" edge="1" parent="1" source="Hv_AU8i6EBTJNeVN1DGL-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" target="Hv_AU8i6EBTJNeVN1DGL-12">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-71.2" y="650" />
+              <mxPoint x="-71.2" y="650" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Hv_AU8i6EBTJNeVN1DGL-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Access granted" vertex="1">
+          <mxGeometry height="60" width="435" x="-180" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="Hv_AU8i6EBTJNeVN1DGL-10" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Yes" vertex="1">
+          <mxGeometry height="30" width="60" x="220" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="Hv_AU8i6EBTJNeVN1DGL-11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Route 1&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="-260" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="Hv_AU8i6EBTJNeVN1DGL-12" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Route 2&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="-120" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="Hv_AU8i6EBTJNeVN1DGL-15" edge="1" parent="1" source="Hv_AU8i6EBTJNeVN1DGL-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.442;entryY=-0.033;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.021;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" target="Hv_AU8i6EBTJNeVN1DGL-11">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-146.96" y="507.36" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
