@@ -1,2 +1,2 @@
 # lead-management-system
-This is a repositorie that will contain a complete lead managament system, including api, backoffice system
+This is a repository that will contain a complete lead management system, including api, backoffice system
