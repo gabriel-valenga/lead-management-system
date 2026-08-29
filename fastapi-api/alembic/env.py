@@ -36,15 +36,12 @@ target_metadata = Base.metadata
 
 def run_migrations_offline() -> None:
     """Run migrations in 'offline' mode."""
-    
-    # 1. Pega a URL vinda dinamicamente do seu arquivo .env/settings
     url = settings.database_url
-    
-    # 2. Configura o contexto usando essa URL real
     context.configure(
         url=url,
         target_metadata=target_metadata,
         literal_binds=True,
+        render_as_batch=True, #param needed for sqlite databases
         dialect_opts={"paramstyle": "named"},
     )
 
@@ -54,14 +51,8 @@ def run_migrations_offline() -> None:
 
 def run_migrations_online() -> None:
     """Run migrations in 'online' mode."""
-    
-    # 1. Pega o dicionário de configurações padrões do alembic.ini
     configuration = config.get_section(config.config_ini_section) or {}
-    
-    # 2. SUBSTITUI A URL DO INI PELA URL REAL CARREGADA DO SEU SETTINGS
     configuration["sqlalchemy.url"] = settings.database_url
-
-    # 3. Passa a configuração corrigida para o motor do SQLAlchemy
     connectable = engine_from_config(
         configuration,
         prefix="sqlalchemy.",
@@ -70,7 +61,7 @@ def run_migrations_online() -> None:
 
     with connectable.connect() as connection:
         context.configure(
-            connection=connection, target_metadata=target_metadata
+            connection=connection, target_metadata=target_metadata, render_as_batch=True #param needed for sqlite databases
         )
 
         with context.begin_transaction():

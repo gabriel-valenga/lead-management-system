@@ -124,7 +124,7 @@ activemq-data/
 *.sage.py
 
 # ==========================================
-# SEU BANCO DE DADOS E LOGS LOCAIS
+# DATABASE AND LOCAL LOGS
 # ==========================================
 *.db
 *.sqlite
