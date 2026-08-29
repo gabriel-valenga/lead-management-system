@@ -2,9 +2,9 @@ from datetime import datetime, timezone
 import uuid #TODO: change to import uuid6 and in the columns below use uuid6.uuid7()
 from sqlalchemy import DateTime, String, Text, func
 from sqlalchemy.orm import Mapped, mapped_column
-from core.database import base
+from core.database import Base
 
-class Lead(base):
+class Lead(Base):
     __tablename__ = "leads"
 
     id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
