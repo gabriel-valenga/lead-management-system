@@ -1,10 +1,11 @@
-from fastapi import APIRouter, Path
+from fastapi import APIRouter
+from uuid import UUID
 
 router = APIRouter()
 
 
 @router.get('/lead/{lead_public_id}')
-async def get_lead_by_public_id(todo_id: int = Path(gt=0)):
+async def get_lead_by_public_id(lead_public_id:UUID):
     pass
 
 
