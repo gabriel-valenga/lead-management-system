@@ -19,8 +19,23 @@ class LeadRepository:
 
     def get_leads(self, filters:LeadFilters):
         query = select(Lead)
-        query_filters = None
+        query_filters = []
         if filters.email:
-            query_filters
-        result = self.db.execute(query)
+            query_filters.append(Lead.email==filters.email)
+        if filters.source:
+            query_filters.append(Lead.source.icontains(filters.source))
+        if filters.name:
+            query_filters.append(Lead.first_name.icontains(filters.name))
+            query_filters.append(Lead.last_name.icontains(filters.name))
+        else:
+            if filters.first_name:
+                query_filters.append(Lead.first_name.icontains(filters.first_name))
+            if filters.last_name:
+                query_filters.append(Lead.last_name.icontains(filters.last_name))
+        if filters.created_at__gte:
+            query_filters.append(Lead.created_at <= filters.created_at__gte)
+        elif filters.created_at__lte:
+            query_filters.append(Lead.created_at >= filters.created_at__lte)
+        result = self.db.execute(query.where(*query_filters))
         return result.scalars().all()
+    
