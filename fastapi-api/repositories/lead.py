@@ -38,4 +38,17 @@ class LeadRepository:
             query_filters.append(Lead.created_at >= filters.created_at__lte)
         result = self.db.execute(query.where(*query_filters))
         return result.scalars().all()
+
+
+    def create_lead(self, lead:Lead):
+        self.db.add(lead)
+        self.db.flush()
+        return lead
+
+
+    def update_lead(self, lead:Lead, data:dict):
+        for field, value in data.items():
+            setattr(lead, field, value)
+        self.db.flush()
+        return lead
     
