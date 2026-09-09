@@ -1,5 +1,7 @@
+from fastapi import Depends
 from sqlalchemy import select
 from sqlalchemy.orm import Session
+from core.database import get_db
 from models.lead import Lead
 from schemas.lead import LeadFilters
 from uuid import UUID
@@ -51,4 +53,7 @@ class LeadRepository:
             setattr(lead, field, value)
         self.db.flush()
         return lead
-    
+
+
+def get_lead_repository(db:Session = Depends(get_db)) -> LeadRepository:
+        return LeadRepository(db)

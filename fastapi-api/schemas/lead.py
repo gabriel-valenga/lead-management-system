@@ -1,5 +1,6 @@
 from datetime import datetime
-from pydantic import BaseModel, Field
+from typing import List
+from pydantic import BaseModel, ConfigDict, Field
 from uuid import UUID
 
 
@@ -46,3 +47,10 @@ class LeadResponse(BaseModel):
     source: str
     created_at: datetime
     updated_at: datetime
+
+    model_config = ConfigDict(from_attributes=True)
+
+
+class LeadListResponse(BaseModel):
+    leads: List[LeadResponse]
+    
