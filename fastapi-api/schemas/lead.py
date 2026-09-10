@@ -22,18 +22,18 @@ class LeadCreateRequest(BaseModel):
     first_name: str = Field(min_length=2, max_length=20)
     last_name: str = Field(min_length=2, max_length=40)
     email: str = Field(min_length=3, max_length=100)
-    company: str | None = Field(max_length=50)
-    job_title: str | None = Field(max_length=50)
-    notes: str | None
+    company: str | None = Field(max_length=50, default=None)
+    job_title: str | None = Field(max_length=50, default=None)
+    notes: str | None = None
     source: str = Field(min_length=1, max_length=20)
 
 
 class LeadUpdateRequest(BaseModel):
     first_name: str = Field(min_length=2, max_length=20)
     last_name: str = Field(min_length=2, max_length=40)
-    company: str | None = Field(max_length=50)
-    job_title: str | None = Field(max_length=50)
-    notes: str | None
+    company: str | None = Field(max_length=50, default=None)
+    job_title: str | None = Field(max_length=50, default=None)
+    notes: str | None = None
 
 
 class LeadResponse(BaseModel):
