@@ -44,16 +44,21 @@ class LeadRepository:
 
     def create_lead(self, lead:Lead):
         self.db.add(lead)
-        self.db.flush()
+        self.db.commit()
         return lead
 
 
     def update_lead(self, lead:Lead, data:dict):
         for field, value in data.items():
             setattr(lead, field, value)
-        self.db.flush()
+        self.db.commit()
         return lead
 
 
+    def delete_lead(self, lead:Lead):
+        self.db.delete(lead)
+        self.db.commit()
+
+
 def get_lead_repository(db:Session = Depends(get_db)) -> LeadRepository:
-        return LeadRepository(db)
+    return LeadRepository(db)
