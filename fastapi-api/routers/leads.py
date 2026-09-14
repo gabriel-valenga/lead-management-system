@@ -14,6 +14,8 @@ def get_lead_by_public_id(
     lead_repository: Annotated[LeadRepository, Depends(get_lead_repository)]
 ):
     lead = lead_repository.get_lead_by_public_id(lead_public_id)
+    if not lead:
+        raise HTTPException(status_code=404, detail=f'lead not found.')
     return lead
     
 

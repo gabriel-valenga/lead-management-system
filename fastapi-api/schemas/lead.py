@@ -29,8 +29,8 @@ class LeadCreateRequest(BaseModel):
 
 
 class LeadUpdateRequest(BaseModel):
-    first_name: str = Field(min_length=2, max_length=20)
-    last_name: str = Field(min_length=2, max_length=40)
+    first_name: str | None = Field(min_length=2, max_length=20, default=None)
+    last_name: str | None = Field(min_length=2, max_length=40, default = None)
     company: str | None = Field(max_length=50, default=None)
     job_title: str | None = Field(max_length=50, default=None)
     notes: str | None = None
